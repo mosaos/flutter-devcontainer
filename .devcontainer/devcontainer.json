@@ -1,0 +1,19 @@
+{
+  "name": "Flutter Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["dart-code.flutter", "dart-code.dart"],
+      "settings": {
+        "java.configuration.updateBuildConfiguration": "interactive"
+      }
+    }
+  },
+  "forwardPorts": [3000],
+  "postCreateCommand": "flutter doctor",
+  // "remoteUser": "flutter",
+  "remoteUser": "root",
+  "runArgs": ["--device", "/dev/kvm"]
+}
